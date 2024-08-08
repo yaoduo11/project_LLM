@@ -1,0 +1,31 @@
+.chat-message-container {
+    display: flex;
+     margin-bottom: 20px; /* Increased margin for message separation */
+    align-items: flex-end;
+    padding: 10px; /* Add padding for better spacing */
+}
+.chat-message-container.ai {
+    justify-content: flex-start; /* Align AI messages to the left */
+}
+.chat-message-container.human {
+    justify-content: flex-end; /* Align Human messages to the right */
+}
+.chat-message-content {
+display: flex;
+align-items: center;
+max-width: 60%;
+}
+.chat-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 25%;
+    margin-right: 10px;
+}
+.chat-message {
+    display: inline-block;
+    background-color: #f2f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 60%;
+    word-wrap: break-word;
+}
