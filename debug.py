@@ -24,12 +24,8 @@ from ImageTo import upload_image
 import base64
 from langchain_core.chat_history import HumanMessage
 from langchain_core.chat_history import AIMessage
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_API_KEY"] = "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"
-#os.environ["OPENAI_API_KEY"]="sk-649wIPk2jJsV2iorRvk9Yud0bZ5puRN8nGDZivMi8wP"
-os.environ["LANGCHAIN_ENDPOINT"]="https://api.smith.langchain.com"
-os.environ["LANGCHAIN_PROJECT"]="streamlitdemo"
-os.environ["MOONSHOT_API_KEY"] = "sk-YOYr37sgnDBEUtgVoNf2gZF0mOebmsoYULIdM5YAkCsAxLxM"
+#更改你自己的api_key
+os.environ["MOONSHOT_API_KEY"] = "MOONSHOT_API_KEY"
 llm = MoonshotChat(model="moonshot-v1-8k", moonshot_api_key=os.environ["MOONSHOT_API_KEY"])
 # 网页标题---包含样式————————————————————————————————————————————————————————————————————————————
 from PIL import Image
@@ -52,7 +48,7 @@ st.markdown(
     }}
     .stHeader {{
         color: {header_color};
-        text-indent: 0.5em;
+        text-indent: 0.5em;                                                                                                                                
     }}
      .indented-text {{
         text-indent: 3em;
@@ -152,6 +148,7 @@ st.text("")
 #初始化数据库以及加载文档
 view_messages = st.expander("View the message contents in session state")
 from langchain_community.utilities import SQLDatabase
+#更改路径
 db=SQLDatabase.from_uri("sqlite:///G:/Sqlite/booking.db")
 loader_path =r"G:\llm program\scholarship.pdf"
 loader_path1=r"G:\llm program\aphdqualify_exam.pdf"
