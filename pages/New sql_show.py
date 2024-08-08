@@ -2,12 +2,6 @@ import mysql.connector
 import streamlit as st
 import sqlite3
 import pandas as pd
-#connection=mysql.connector.connect(
-#    host='localhost',
-#    user='root',
-#    password='ydy2350149',
- #   database='meeting_rooms'
-#)
 #cursor=connection.cursor()
 
 #cursor.execute("Select * from reservations")
@@ -51,6 +45,7 @@ st.text("")
 #df=pd.DataFrame(data,columns=cursor.column_names,)
 #st.dataframe(df)
 #使用sqlite3时用
+#替换db文件路径
 conn = sqlite3.connect(r'G:\Sqlite\booking.db')
 cursor=conn.cursor()
 
